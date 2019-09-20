@@ -1,0 +1,12 @@
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\bin\Debug\netstandard2.0\Figuras.deps.json
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\bin\Debug\netstandard2.0\Figuras.dll
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\bin\Debug\netstandard2.0\Figuras.pdb
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\obj\Debug\netstandard2.0\Figuras.csprojAssemblyReference.cache
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\obj\Debug\netstandard2.0\Figuras.csproj.CoreCompileInputs.cache
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\obj\Debug\netstandard2.0\Figuras.AssemblyInfoInputs.cache
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\obj\Debug\netstandard2.0\Figuras.AssemblyInfo.cs
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\obj\Debug\netstandard2.0\Figuras.dll
+C:\Users\CDS07\source\repos\Figuras\Figuras\Figuras\obj\Debug\netstandard2.0\Figuras.pdb

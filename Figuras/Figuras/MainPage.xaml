@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Figuras"
+             xmlns:t="clr-namespace:Figuras.Triggers"
+             x:Class="Figuras.MainPage">
+
+    <StackLayout Padding="0" Spacing="0" BackgroundColor="#1b3845">
+        <StackLayout VerticalOptions="FillAndExpand" Padding="10">
+            <StackLayout x:Name="start" VerticalOptions="FillAndExpand">
+                <Label Text="Elige una opcion en los botones de abajo" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10" TextColor="White"/>
+                <Image Source="backk" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" IsVisible="False" x:Name="triangulo" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Triangulo" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10" TextColor="White"/>
+                    <Entry Placeholder="Ingrese la altura en cm" Keyboard="Numeric" x:Name="Taltura" TextColor="White" PlaceholderColor="White" Text="">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference Taltura}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Entry Placeholder="Ingrese la base en cm" Keyboard="Numeric" x:Name="Tbase" TextColor="White" PlaceholderColor="White" Text="">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference Tbase}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Image Source="Atriangulo"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" IsVisible="False" x:Name="cuadrado" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Cuadrado" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10" TextColor="White"/>
+                    <Entry Placeholder="Ingrese un lado en cm" Keyboard="Numeric" x:Name="Clado" TextColor="White" PlaceholderColor="White" Text="">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference Clado}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Image Source="Acuadrado"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" IsVisible="False" x:Name="cubo" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Cubo" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10" TextColor="White"/>
+                    <Entry Placeholder="Ingrese la arista" Keyboard="Numeric" x:Name="CuboLado" TextColor="White" PlaceholderColor="White" Text="">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference CuboLado}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Image Source="Acubo"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" IsVisible="False" x:Name="circulo" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Circulo" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10" TextColor="White"/>
+                    <Entry Placeholder="Ingrese el radio en cm" Keyboard="Numeric" x:Name="radio" TextColor="White" PlaceholderColor="White" Text="">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference radio}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Image Source="Acirculo"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" IsVisible="False" x:Name="cilindro" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Cilindro" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10" TextColor="White"/>
+                    <Entry Placeholder="Ingrese la altura en cm" Keyboard="Numeric" x:Name="Caltura" TextColor="White" PlaceholderColor="White">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference Caltura}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Entry Placeholder="Ingrese el radio en cm" Keyboard="Numeric" x:Name="Cradio" TextColor="White" PlaceholderColor="White">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference Taltura}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Image Source="Acilindro"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" IsVisible="False" x:Name="trapezio" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Trapezio" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10" TextColor="White"/>
+                    <Entry Placeholder="Ingrese la altura en cm" Keyboard="Numeric" x:Name="TraAltura" TextColor="White" PlaceholderColor="White">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference TraAltura}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Entry Placeholder="Ingrese la base menor en cm" Keyboard="Numeric" x:Name="b" TextColor="White" PlaceholderColor="White">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference b}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Entry Placeholder="Ingrese la base mayor en cm" Keyboard="Numeric" x:Name="B" TextColor="White" PlaceholderColor="White">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference B}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Image Source="Atrapecio"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" IsVisible="False" x:Name="rombo" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Trapezio" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10" TextColor="White"/>
+                    <Entry Placeholder="Ingrese la altura en cm" Keyboard="Numeric" x:Name="dM" TextColor="White" PlaceholderColor="White">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference dM}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Entry Placeholder="Ingrese la anchura en cm" Keyboard="Numeric" x:Name="dm" TextColor="White" PlaceholderColor="White">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference dm}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Image Source="Arombus"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" IsVisible="False" x:Name="hexagono" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Trapezio" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10" TextColor="White"/>
+                    <Entry Placeholder="Ingrese el apotema en cm" Keyboard="Numeric" x:Name="Hapotema" TextColor="White" PlaceholderColor="White">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference Hapotema}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Image Source="Ahexagon"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" IsVisible="False" x:Name="tetraedro" Orientation="Horizontal">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Trapezio" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10" TextColor="White"/>
+                    <Entry Placeholder="Ingrese la arista en cm" Keyboard="Numeric" x:Name="Tearista" TextColor="White" PlaceholderColor="White">
+                        <Entry.Triggers>
+                            <MultiTrigger TargetType="Entry">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference Tearista}, Path=Text.Length}" Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="PlaceholderColor" Value="LightCoral"/>
+                            </MultiTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Image Source="Atetraedro"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="Result" FontSize="Medium" TextColor="White">
+            </Label>
+        </StackLayout>
+        <StackLayout VerticalOptions="Center">
+            <Button Text="Calcular" Clicked="Button_Clicked" BackgroundColor="#029697" HorizontalOptions="Center" TextColor="White" Margin="7" Padding="10,0,10,0" x:Name="calc">
+                <Button.Triggers>
+                    <EventTrigger Event="Clicked">
+                        <t:ButtonImageTrigger/>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+        </StackLayout>
+        <Frame Padding="0" VerticalOptions="End" BackgroundColor="#212121" Margin="0">
+            <Grid ColumnSpacing="-8" RowSpacing="0" Margin="0" Padding="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--Fila 2 -->
+                <ImageButton
+                    Clicked="BtnTriangulo_Clicked"
+                    x:Name="BtnTriangulo"
+                    Margin="7, 5, 7, 5"
+                    CornerRadius="20"
+                    BackgroundColor="#2f3643"
+                    Source="triangle"
+                    Padding="30"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Grid.Column="0"
+                    Grid.Row="0">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <t:ButtonTrigger/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+
+                <ImageButton
+                    Clicked="BtnCuadrado_Clicked"
+                    x:Name="BtnCuadrado"
+                    Margin="7, 5, 7, 5"
+                    CornerRadius="20"
+                    Source="square"
+                    Padding="30"
+                    BackgroundColor="#2f3643"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Grid.Column="1"
+                    Grid.Row="0">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <t:ButtonTrigger/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+
+                <ImageButton
+                     Clicked="BtnCubo_Clicked"
+                     x:Name="BtnCubo"
+                     Margin="7, 5, 7, 5"
+                     CornerRadius="20"
+                     Source="cube"
+                     Padding="20"
+                     BackgroundColor="#1b3845"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     Grid.Column="2"
+                     Grid.Row="0">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <t:ButtonTrigger/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+
+                <!--Fila 3 -->
+                <ImageButton
+                     Clicked="BtnCirculo_Clicked"
+                     x:Name="BtnCirculo"
+                     Margin="7, 5, 7, 5"
+                     CornerRadius="20"
+                     Source="circular"
+                     Padding="25"
+                     BackgroundColor="#2f3643"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     Grid.Column="0"
+                     Grid.Row="1">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <t:ButtonTrigger/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+
+                <ImageButton
+                    Clicked="BtnTrapezio_Clicked"
+                    x:Name="BtnTrapezio"
+                    Margin="7, 5, 7, 5"
+                    CornerRadius="20"
+                    Source="trapezium"
+                    Padding="20"
+                    BackgroundColor="#2f3643"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Grid.Column="1"
+                    Grid.Row="1">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <t:ButtonTrigger/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+
+                <ImageButton
+                    Clicked="Btncilindro_Clicked"
+                    x:Name="BtnCilindro"
+                    Margin="7, 5, 7, 5"
+                    CornerRadius="20"
+                    Source="cylinder"
+                    Padding="20"
+                    BackgroundColor="#1b3845"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Grid.Column="2"
+                    Grid.Row="1">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <t:ButtonTrigger/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+                <!--Fila 4 -->
+                <ImageButton
+                     Clicked="BtnRombo_Clicked"
+                     x:Name="BtnRombo"
+                     Margin="7, 5, 7, 5"
+                     CornerRadius="20"
+                     Source="rhombus"
+                     Padding="25"
+                     BackgroundColor="#2f3643"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     Grid.Column="0"
+                     Grid.Row="2">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <t:ButtonTrigger/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+
+                <ImageButton
+                    Clicked="BtnHexagonal_Clicked"
+                    x:Name="BtnHexagonal"
+                    Margin="7, 5, 7, 5"
+                    CornerRadius="20"
+                    Source="hexagonal"
+                    Padding="20"
+                    BackgroundColor="#2f3643"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Grid.Column="1"
+                    Grid.Row="2">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <t:ButtonTrigger/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+
+                <ImageButton
+                    Clicked="BtnTetraedro_Clicked"
+                    x:Name="BtnTetraedro"
+                    Margin="7, 5, 7, 5"
+                    CornerRadius="20"
+                    Source="tetrahedron"
+                    Padding="20"
+                    BackgroundColor="#1b3845"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Grid.Column="2"
+                    Grid.Row="2">
+                    <ImageButton.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <t:ButtonTrigger/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+            </Grid>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
